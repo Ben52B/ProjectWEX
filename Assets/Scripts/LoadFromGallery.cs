@@ -6,6 +6,7 @@ using System.IO;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEditor.Profiling;
+using Unity.VisualScripting;
 
 public class LoadFromGallery : MonoBehaviour
 {
@@ -45,6 +46,9 @@ public class LoadFromGallery : MonoBehaviour
         while(!www.isDone)
             yield return null;
         
-        testimage.GetComponent<RawImage>().texture = DownloadHandlerTexture.GetContent(www);
+        Texture2D upladedImage = DownloadHandlerTexture.GetContent(www);
+        Debug.Log(DownloadHandlerTexture.GetContent(www).GetType());
+        testimage.GetComponent<RawImage>().texture = upladedImage;
+
     }
 }

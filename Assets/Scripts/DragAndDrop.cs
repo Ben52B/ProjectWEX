@@ -7,8 +7,8 @@ using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IEndDragHandler,IDragHandler
 {
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private Transform AnimationPanel;
+    [SerializeField] private RectTransform canvas;
+ 
     private RectTransform rectTransform;
     private void Awake() 
     {
@@ -17,9 +17,15 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
-        //Transform animation = Instantiate(this.transform, this.transform.position,this.transform.rotation);
-       // animation.SetParent(AnimationPanel);
-        //animation.transform.localScale = new Vector3(1,1,1);
+        if (!this.name.Contains("_used") )
+        {
+            Transform animation = Instantiate(this.transform, this.transform.position,this.transform.rotation);
+            this.name=animation.name+"_used";
+            animation.SetParent(canvas);
+            animation.transform.localScale = new Vector3(1,1,1);
+
+        }
+
         //Debug.Log(this.GetComponent<RectTransform>().anchoredPosition);
         //animation.GetComponent<RectTransform>().anchoredPosition=this.GetComponent<RectTransform>().anchoredPosition;
         //animation.transform.position = this.transform.position;
@@ -31,7 +37,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        rectTransform.anchoredPosition += eventData.delta;
     }
     public void OnEndDrag(PointerEventData eventData)
     {

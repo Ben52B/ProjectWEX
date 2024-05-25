@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6060679424946072705}
   - component: {fileID: 3998893380713577880}
   - component: {fileID: 3915999216568338212}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4807,7 +4807,8 @@ GameObject:
   - component: {fileID: 3000102235394472627}
   - component: {fileID: 8024315047515837678}
   - component: {fileID: 428260809624239147}
-  m_Layer: 0
+  - component: {fileID: 249299117278692483}
+  m_Layer: 5
   m_Name: StarsBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9660,3 +9661,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &249299117278692483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4293514522374277621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73300e2c1254d424c9f1800542a625f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}

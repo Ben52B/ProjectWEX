@@ -47,8 +47,12 @@ public class LoadFromGallery : MonoBehaviour
             yield return null;
         
         Texture2D upladedImage = DownloadHandlerTexture.GetContent(www);
-        Debug.Log(DownloadHandlerTexture.GetContent(www).GetType());
-        testimage.GetComponent<RawImage>().texture = upladedImage;
+        Debug.Log(upladedImage.GetType());
+        Debug.Log(upladedImage.height);
+        Debug.Log(upladedImage.width);
+        testimage.texture = upladedImage;
+        testimage.GetComponent<RectTransform>().sizeDelta = new Vector2(upladedImage.width,upladedImage.height);
+       // testimage.rectTransform.rect.width= upladedImag.rein
 
     }
 }

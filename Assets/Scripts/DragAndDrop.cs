@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IEndDragHandler,IDragHandler
+public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IEndDragHandler,IDragHandler,IDataPresistence 
 {
     [SerializeField] private RectTransform canvas;
  
@@ -20,7 +20,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         if (!this.name.Contains("_used") )
         {
             Transform animation = Instantiate(this.transform, this.transform.position,this.transform.rotation);
-            this.name=animation.name+"_used";
+            animation.name =this.name;
+            this.name=this.name+"_used";
             animation.SetParent(canvas);
             animation.transform.localScale = new Vector3(1,1,1);
             this.GetComponent<ParticleSystem>().Play();
@@ -49,5 +50,19 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Debug.Log("OnPointerDown");
     }
     
- }
+ 
 
+public void LoadData(WishData data)
+{
+    this.rectTransform.position = data.objectPosition;
+}
+
+public void SaveData(ref WishData data)
+{
+    Debug.Log(this.transform.position);
+    data.objectPosition= this.transform.position;
+}
+
+
+
+}

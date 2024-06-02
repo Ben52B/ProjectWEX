@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da2dc68a65718a74783ce810f689f8c1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 204608
+  packageName: Party Letters
+  packageVersion: 1.1.1
+  assetPath: Assets/TirgamesAssets/ModernWorld/Shared/PhysMaterials/PhyGlass.physicMaterial
+  uploadId: 585892

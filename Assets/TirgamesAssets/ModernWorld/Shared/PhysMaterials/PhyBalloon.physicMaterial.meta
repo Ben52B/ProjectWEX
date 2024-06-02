@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 54fc41acca510a94e9be3f490a7ab1b1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 204608
+  packageName: Party Letters
+  packageVersion: 1.1.1
+  assetPath: Assets/TirgamesAssets/ModernWorld/Shared/PhysMaterials/PhyBalloon.physicMaterial
+  uploadId: 585892

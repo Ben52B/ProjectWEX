@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class SceneData
 {
@@ -10,8 +11,10 @@ public class SceneData
 
 [System.Serializable]
 public class ObjectData
-{
+{   
     public string prefabName;
+
+    /*
     public Vector3 position;
     public Quaternion rotation;
     public Vector3 scale;
@@ -26,4 +29,5 @@ public class AnimationData
     public string animationClipName;
     public float playbackTime;
     public bool isPlaying;
+    */
 }

@@ -1,4 +1,6 @@
-using UnityEngine;
+
+/*
+sing UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using ES3Types;
@@ -9,7 +11,9 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string fileName)
     {
+        
         string fullPath = Application.persistentDataPath + "/" + fileName;
+        Debug.Log(fullPath);
         if (ES3.FileExists(fullPath))
         {
             Debug.Log("Loading scene from " + fullPath);
@@ -65,3 +69,4 @@ public class SceneLoader : MonoBehaviour
         }
     }
 }
+*/

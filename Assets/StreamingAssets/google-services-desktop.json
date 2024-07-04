@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "683907782098",
-    "project_id": "wishextest",
-    "storage_bucket": "wishextest.appspot.com"
+    "project_number": "811151546278",
+    "project_id": "firestoretest-6af5c",
+    "storage_bucket": "firestoretest-6af5c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:683907782098:android:b28178acce08158503240b",
+        "mobilesdk_app_id": "1:811151546278:android:986bfa54f7c765bf43e167",
         "android_client_info": {
           "package_name": "com.DefaultCompany.WishEx"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAcoVED7Sj7lYRQNZh0u1FAtpikToozzvs"
+          "current_key": "AIzaSyDKCnYvl2xefKUKvvvNaCJqBEJvfXORbuw"
         }
       ],
       "services": {

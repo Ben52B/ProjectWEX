@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using ES3Types;
 
+
 public class SceneSaver : MonoBehaviour
 {
     public List<GameObject> objectsToSave;
@@ -13,6 +14,7 @@ public class SceneSaver : MonoBehaviour
         foreach (GameObject obj in objectsToSave)
         {
             ObjectData data = new ObjectData();
+            /*
             data.prefabName = obj.name;
             data.position = obj.transform.position;
             data.rotation = obj.transform.rotation;
@@ -39,7 +41,8 @@ public class SceneSaver : MonoBehaviour
             {
                 data.videoPath = videoComponent.videoPath;
             }
-
+            
+            */
             sceneData.objects.Add(data);
         }
 
